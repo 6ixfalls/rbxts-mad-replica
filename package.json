@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/mad-replica",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Replica typings.",
   "main": "src/init.lua",
   "homepage": "https://github.com/6ixfalls/rbxts-mad-replica#readme",
