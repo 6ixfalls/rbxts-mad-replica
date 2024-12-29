@@ -17,7 +17,8 @@
   ],
   "author": "6ixfalls",
   "contributors": [
-    "Mixu_78"
+    "Mixu_78",
+    "Sandy Stone"
   ],
   "license": "Apache-2.0",
   "types": "src/index.d.ts",
