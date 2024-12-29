@@ -1,5 +1,5 @@
-import { ReplicaToken } from "../util";
-import { Replica } from "../index";
+import { ReplicaToken } from "./util";
+import { Replica } from "./index";
 
 export interface ReplicaServer {
 	/**

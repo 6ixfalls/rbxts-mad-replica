@@ -1,7 +1,7 @@
 import { ArrayPath, OmitFirstParam, Path, PathValue, PathValues, StringPath, StringPathValue } from "./util";
 
-import { ReplicaClient } from "./ReplicaClient/init";
-import { ReplicaServer } from "./ReplicaServer/init";
+import { ReplicaClient } from "./ReplicaClient";
+import { ReplicaServer } from "./ReplicaServer";
 
 export type Replica<C extends keyof Replicas = keyof Replicas> = ReplicaInstance<
 	Replicas[C]["Data"],

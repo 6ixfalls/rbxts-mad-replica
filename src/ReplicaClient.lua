@@ -70,7 +70,7 @@ MAD STUDIO
 
 ----- Dependencies -----
 
-local ReplicaShared = script
+local ReplicaShared = script.shared
 local Remote = require(ReplicaShared.Remote)
 local Signal = require(ReplicaShared.Signal)
 local Maid = require(ReplicaShared.Maid)
