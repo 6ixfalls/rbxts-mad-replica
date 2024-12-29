@@ -87,7 +87,7 @@ MAD STUDIO
 
 ----- Dependencies -----
 
-local ReplicaShared = script.shared
+local ReplicaShared = script.Parent.shared
 local RateLimit = require(ReplicaShared.RateLimit)
 local Remote = require(ReplicaShared.Remote)
 local Signal = require(ReplicaShared.Signal)
