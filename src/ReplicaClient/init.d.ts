@@ -1,14 +1,14 @@
 import { Replica } from "../index";
 
-export interface ReplicaController {
+export interface ReplicaClient {
 	/**
-	 * Fired once after the client finishes receiving initial replica data from server.
+	 * OnLocalReady
 	 */
-	InitialDataReceivedSignal: RBXScriptSignal<() => void>;
+	OnLocalReady: RBXScriptSignal<() => void>;
 	/**
-	 * Set to true after the client finishes receiving initial replica data from server.
+	 * IsReady
 	 */
-	InitialDataReceived: boolean;
+	IsReady: boolean;
 	/**
 	 * Listens to creation of replicas client\-side of a particular class.
 	 * ```ts
@@ -19,23 +19,11 @@ export interface ReplicaController {
 	 * ```
 	 * This is the preferred method of grabbing references to all replicas clients\-side.
 	 */
-	ReplicaOfClassCreated: <C extends keyof Replicas>(
-		replicaClass: C,
-		listener: (replica: Replica<C>) => void,
-	) => RBXScriptConnection;
-	/**
-	 * Fired every time a replica is created client\-side.
-	 * ```ts
-	 * ReplicaController.NewReplicaSignal.Connect((replica) => {
-	 *   print(`Replica created: ${replica.Identify()}`);
-	 * })
-	 * ```
-	 */
-	NewReplicaSignal: RBXScriptSignal<(replica: Replica) => void>;
+	OnNew: <C extends keyof Replicas>(token: C, listener: (replica: Replica<C>) => void) => RBXScriptConnection;
 	/**
 	 * Returns a `Replica` that is loaded client\-side with a `Replica.Id` that matches `replicaId`.
 	 */
-	GetReplicaById: (replicaId: number) => Replica | undefined;
+	FromId: (replicaId: number) => Replica | undefined;
 	/**
 	 * Requests the server to start sending replica data.
 	 *

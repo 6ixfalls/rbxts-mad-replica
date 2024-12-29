@@ -2,6 +2,8 @@
 
 > `roblox-ts` typings for ReplicaService made by MadStudio.
 
+Scrapped together hackily, but it works. Waiting for API docs to release to improve documentation. Some documentation has not been updated yet.
+
 ## Table of Contents
 
 - [TypeScript Example](#typescript-example)

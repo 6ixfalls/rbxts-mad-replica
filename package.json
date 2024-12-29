@@ -1,12 +1,12 @@
 {
-  "name": "@rbxts/replicaservice",
-  "version": "1.1.0-ts.2",
-  "description": "ReplicaService typings.",
+  "name": "@rbxts/mad-replica",
+  "version": "1.0.0",
+  "description": "Replica typings.",
   "main": "src/init.lua",
-  "homepage": "https://github.com/Mixu78/replicaservice-typings#readme",
+  "homepage": "https://github.com/6ixfalls/rbxts-mad-replica#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mixu78/replicaservice-typings"
+    "url": "https://github.com/6ixfalls/rbxts-mad-replica"
   },
   "scripts": {},
   "keywords": [
@@ -15,9 +15,9 @@
     "types",
     "roblox"
   ],
-  "author": "Mixu_78",
+  "author": "6ixfalls",
   "contributors": [
-    "Sandy Stone"
+    "Mixu_78"
   ],
   "license": "Apache-2.0",
   "types": "src/index.d.ts",
