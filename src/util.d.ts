@@ -157,3 +157,12 @@ export type PathValues<
 			[K in keyof V]: V[K];
 	  }>
 	: never;
+
+export type LiteralPath<T> = readonly [keyof T, ...(readonly (keyof any)[])];
+export type GetPathValue<T, P extends readonly any[]> = P extends readonly [infer K, ...infer Rest]
+	? K extends keyof T
+		? Rest["length"] extends 0
+			? T[K]
+			: GetPathValue<T[K], Rest>
+		: never
+	: T;

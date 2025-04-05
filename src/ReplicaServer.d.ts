@@ -3,7 +3,7 @@ import { Replica } from "./index";
 
 export interface ReplicaServer {
 	/**
-	 * A reference of players that have received initial data \- having received initial data means having access to all replicas that are selectively replicated to that player.
+	 * A reference of players that have received initial data - having received initial data means having access to all replicas that are selectively replicated to that player.
 	 */
 	readonly ReadyPlayers: ReadonlyMap<Player, true>;
 	/**
@@ -15,7 +15,7 @@ export interface ReplicaServer {
 	 */
 	RemovingReadyPlayer: RBXScriptSignal<(player: Player) => void>;
 	/**
-	 * Tokens for a particular `token_string` can only be created once \- this helps the developer avoid `Replica` class name collisions when merging codebases.
+	 * Tokens for a particular `token_string` can only be created once - this helps the developer avoid `Replica` class name collisions when merging codebases.
 	 */
 	Token: <C extends keyof Replicas>(tokenString: C) => ReplicaToken<C>;
 	/**
@@ -44,3 +44,5 @@ export interface ReplicaServer {
 	 */
 	FromId: (replicaId: number) => Replica;
 }
+
+export declare const ReplicaServer: ReplicaServer;
